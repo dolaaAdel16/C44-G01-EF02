@@ -51,7 +51,11 @@ namespace EF02.Contexts
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
+            optionsBuilder.UseSqlServer("Server = .;  Database = AppGP04;  Trusted_Connection = True;  TrustServerCertificate = True; ");
+
             optionsBuilder.UseSqlServer("Server = .;  Database = AppGP04;  Trusted_Connection = True;  TrustServerCertificate = True ");
+
         }
 
         public DbSet<Employee> Employees { get; set; }

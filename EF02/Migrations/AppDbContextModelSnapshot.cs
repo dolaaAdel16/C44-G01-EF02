@@ -28,11 +28,13 @@ namespace EF02.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 100L, 100);
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("DepartmentName");
 
                     b.HasKey("Id");
 
@@ -81,11 +83,17 @@ namespace EF02.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar")
+
+                        .HasColumnName("EmployeeName");
+
+                    b.Property<decimal?>("Salary")
+                        .HasColumnType("decimal(18,2)");
+
                         .HasColumnName("Name");
 
                     b.Property<double?>("Salary")
                         .HasColumnType("float");
+
 
                     b.Property<int?>("WorkForId")
                         .HasColumnType("int");
