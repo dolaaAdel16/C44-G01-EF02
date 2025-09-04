@@ -128,6 +128,20 @@ namespace EF02
             #endregion
 
 
+            #region One-One Relationship
+            //Department department = new Department();
+            //department.Manager. 
+            #endregion
+
+
+            #region One-Many Relationship
+
+            //Employee employee = new Employee();
+            //Department department = new Department();
+
+            //employee.WorkFor
+
+            #endregion
 
 
         }
