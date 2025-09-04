@@ -18,7 +18,7 @@ namespace EF02.Entities
 
         //[InverseProperty(nameof(Department.Manager))]
 
-        public Department Department { get; set; } // Navigational Property
+        public Department? Department { get; set; } // Navigational Property
 
         public int? WorkForId { get; set; } // Foreign Key   
 

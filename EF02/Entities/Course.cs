@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace EF02.Entities
 {
-    internal class Student
+    internal class Course
     {
         public int Id { get; set; }
-        public string Name { get; set; } 
+      
+        public string Name { get; set; }
 
-        public int Age { get; set; }
-
-        public List<StudentCourse> Courses { get; set; }
-
+        public List<StudentCourse> Students { get; set; }
     }
 }
