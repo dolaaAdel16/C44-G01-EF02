@@ -32,16 +32,18 @@ namespace EF02.Contexts
             //                               .WithOne(D => D.Manager)
             //                               .HasForeignKey<Department>(D => D.EmpId);
 
-            modelBuilder.Entity<Department>()
-                                             .HasOne(D => D.Manager)
-                                             .WithOne(E => E.Department)
-                                             .HasForeignKey<Department>(D => D.EmpId);
+            //modelBuilder.Entity<Department>()
+            //                                 .HasOne(D => D.Manager)
+            //                                 .WithOne(E => E.Department)
+            //                                 .HasForeignKey<Department>(D => D.EmpId);
 
 
             modelBuilder.Entity<Department>()
                                              .HasMany(D => D.Employees)
                                              .WithOne(E => E.WorkFor)
                                              .HasForeignKey(E => E.WorkForId);
+
+            modelBuilder.Entity<StudentCourse>().HasKey(SC => new { SC.CourseId, SC.StudentId });
 
 
 
@@ -54,5 +56,10 @@ namespace EF02.Contexts
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+
+        public DbSet<Student> Students { get; set; }
+
+        public DbSet<Course> Courses { get; set; }
     }
+
 }
