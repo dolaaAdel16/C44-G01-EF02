@@ -34,7 +34,7 @@ namespace EF02
 
             using AppDbContext context = new AppDbContext();
 
-            #region CRUD Operations (Retrive)
+            #region CRUD Operations (Create)
             //var employee = new Employee()
             //{
             //    Name = "Mohammed Ali",
@@ -75,6 +75,27 @@ namespace EF02
             #endregion
 
 
+            #region CRUD Operations (Retrive)
+            //var Result = context.Employees.FirstOrDefault(E => E.Id == 4);
+
+            ////var Result = context.Employees.Select(E => E.Name);
+
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //Result.Name = "Ali";  
+
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //foreach (var item in Result)
+            //{ 
+            //    Console.WriteLine(item);
+            //    Console.WriteLine(item.Id);
+
+            //}
+
+            //Console.WriteLine(Result?.Name);
+            //Console.WriteLine(Result?.Id); 
+            #endregion 
 
 
 

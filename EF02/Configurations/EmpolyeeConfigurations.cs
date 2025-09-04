@@ -21,7 +21,7 @@ namespace EF02.Configurations
                 .HasColumnType("varchar")
                 .HasMaxLength(50)
                 .IsRequired(); 
-            E.Property(E => E.Salary).HasColumnType("decimal(18,2)")
+            E.Property(E => E.Salary).HasColumnType("float")
                 .IsRequired(false);
         }
     }
