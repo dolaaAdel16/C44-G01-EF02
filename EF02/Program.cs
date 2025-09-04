@@ -112,7 +112,20 @@ namespace EF02
 
             //context.SaveChanges();
             //Console.WriteLine(context.Entry(Result).State); 
-            #endregion 
+            #endregion
+
+
+            #region CRUD Operations (Delete)
+            //var Result = context.Employees.FirstOrDefault(E => E.Id == 3);
+
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //context.Employees.Remove(Result);
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //context.SaveChanges();
+            //Console.WriteLine(context.Entry(Result).State); 
+            #endregion
 
 
 
