@@ -34,15 +34,16 @@ namespace EF02
 
             using AppDbContext context = new AppDbContext();
 
-            var employee = new Employee()
-            {
-                Name = "Mohammed Ali",
-                Salary = 13000 , 
-                Address = "Cairo" , 
-                Age = 22 
-            };
-
             #region CRUD Operations (Retrive)
+            //var employee = new Employee()
+            //{
+            //    Name = "Mohammed Ali",
+            //    Salary = 13000 , 
+            //    Address = "Cairo" , 
+            //    Age = 22 
+            //};
+
+
             //Console.WriteLine(context.Entry(employee).State);
 
             //employee.Name = "Mohamed";  
@@ -71,8 +72,7 @@ namespace EF02
             //Console.WriteLine(context.Entry(employee).State);
 
             //context.SaveChanges();  
-
-            #endregion 
+            #endregion
 
 
 
