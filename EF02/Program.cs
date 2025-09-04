@@ -34,15 +34,16 @@ namespace EF02
 
             using AppDbContext context = new AppDbContext();
 
-            var employee = new Employee()
-            {
-                Name = "Mohammed Ali",
-                Salary = 13000 , 
-                Address = "Cairo" , 
-                Age = 22 
-            };
+            #region CRUD Operations (Create)
+            //var employee = new Employee()
+            //{
+            //    Name = "Mohammed Ali",
+            //    Salary = 13000 , 
+            //    Address = "Cairo" , 
+            //    Age = 22 
+            //};
 
-            #region CRUD Operations (Retrive)
+
             //Console.WriteLine(context.Entry(employee).State);
 
             //employee.Name = "Mohamed";  
@@ -71,10 +72,30 @@ namespace EF02
             //Console.WriteLine(context.Entry(employee).State);
 
             //context.SaveChanges();  
+            #endregion
 
+
+            #region CRUD Operations (Retrive)
+            //var Result = context.Employees.FirstOrDefault(E => E.Id == 4);
+
+            ////var Result = context.Employees.Select(E => E.Name);
+
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //Result.Name = "Ali";  
+
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //foreach (var item in Result)
+            //{ 
+            //    Console.WriteLine(item);
+            //    Console.WriteLine(item.Id);
+
+            //}
+
+            //Console.WriteLine(Result?.Name);
+            //Console.WriteLine(Result?.Id); 
             #endregion 
-
-
 
 
 
