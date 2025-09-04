@@ -95,7 +95,25 @@ namespace EF02
 
             //Console.WriteLine(Result?.Name);
             //Console.WriteLine(Result?.Id); 
+            #endregion
+
+
+            #region CRUD Operations (Update)
+            //var Result = context.Employees.FirstOrDefault(E => E.Id == 4 );
+
+            //Console.WriteLine(context.Entry(Result).State); 
+
+            //Result.Name = "Omar Ali";
+            ////Console.WriteLine(context.Entry(Result).State);
+
+            ////context.Update(Result);
+            //Console.WriteLine(context.Entry(Result).State);
+
+
+            //context.SaveChanges();
+            //Console.WriteLine(context.Entry(Result).State); 
             #endregion 
+
 
 
 
