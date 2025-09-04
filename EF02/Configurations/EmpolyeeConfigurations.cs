@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace EF02.Configurations
 {
-    internal class EmplyeeConfigurations : IEntityTypeConfiguration<Employee>
+    internal class EmpolyeeConfigurations : IEntityTypeConfiguration<Employee>
     {
         public void Configure(EntityTypeBuilder<Employee> E)
         {
            E.HasKey(E => E.Id);
            E.Property(E => E.Id).UseIdentityColumn(10, 10);
            E.Property(E => E.Name)
-                .HasColumnName("EmployeeName")
+                .HasColumnName("Name")
                 .HasColumnType("varchar")
                 .HasMaxLength(50)
                 .IsRequired(); 

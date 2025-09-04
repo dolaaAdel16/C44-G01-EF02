@@ -22,7 +22,7 @@ namespace EF02.Contexts
             //    .HasMaxLength(50)
             //    .IsRequired();    
 
-            modelBuilder.ApplyConfiguration(new EmplyeeConfigurations());
+            modelBuilder.ApplyConfiguration(new EmpolyeeConfigurations());
             modelBuilder.ApplyConfiguration(new DepartmentConfigurations());
 
             //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly())
@@ -32,7 +32,7 @@ namespace EF02.Contexts
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = .; , Database = AppGP04; , Trusted_Connection = True; , TrustServerCertificate = True; ");
+            optionsBuilder.UseSqlServer("Server = .;  Database = AppGP04;  Trusted_Connection = True;  TrustServerCertificate = True ");
         }
 
         public DbSet<Employee> Employees { get; set; }
